@@ -23,7 +23,7 @@ spec:
     stages {
         stage('Build') {
             steps {
-                sh ("mvn -Dmaven.repo.local=${HOME}/.m2/repository mvn package -DskipTests=true -Dmaven.javadoc.skip=true")
+                sh ("mvn -Dmaven.repo.local=${HOME}/.m2/repository package -DskipTests=true -Dmaven.javadoc.skip=true")
 
                 sh ("./create_release.sh $GITHUB_ORGANIZATION $GITHUB_REPO $HADOOP_VERSION $VERSION $GITHUB_TOKEN")
             }
