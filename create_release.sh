@@ -22,3 +22,7 @@ curl -XPOST -H "Authorization:token $GITHUB_TOKEN" \
 curl -XPOST -H "Authorization:token $GITHUB_TOKEN" \
     -H "Content-Type:application/octet-stream" \
     --data-binary @tez-dist/target/tez-$VERSION.tar.gz https://uploads.github.com/repos/$GITHUB_ORGANIZATION/$GITHUB_REPO/releases/$id/assets?name=tez-$VERSION.tar.gz
+
+curl -XPOST -H "Authorization:token $GITHUB_TOKEN" \
+    -H "Content-Type:application/octet-stream" \
+    --data-binary @tez-ui/target/tez-ui-$VERSION.war https://uploads.github.com/repos/$GITHUB_ORGANIZATION/$GITHUB_REPO/releases/$id/assets?name=tez-ui-$VERSION.war
