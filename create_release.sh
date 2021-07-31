@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 GITHUB_ORGANIZATION=$1
@@ -25,3 +26,7 @@ curl -XPOST -H "Authorization:token $GITHUB_TOKEN" \
 curl -XPOST -H "Authorization:token $GITHUB_TOKEN" \
     -H "Content-Type:application/octet-stream" \
     --data-binary @tez-ui/target/tez-ui-$VERSION.war https://uploads.github.com/repos/$GITHUB_ORGANIZATION/$GITHUB_REPO/releases/$id/assets?name=tez-ui-$VERSION.war
+
+curl -XPOST -H "Authorization:token $GITHUB_TOKEN" \
+    -H "Content-Type:application/octet-stream" \
+    --data-binary @tez-plugins/tez-aux-services/target/tez-aux-services-$VERSION.jar https://uploads.github.com/repos/$GITHUB_ORGANIZATION/$GITHUB_REPO/releases/$id/assets?tez-aux-services-$VERSION.jar
