@@ -112,7 +112,7 @@
     </dependency>
     <dependency>
       <groupId>io.netty</groupId>
-      <artifactId>netty-all</artifactId>
+      <artifactId>netty</artifactId>
     </dependency>
     <dependency>
       <groupId>com.google.guava</groupId>
@@ -237,7 +237,7 @@
                   <shadedPattern>org.apache.tez.shaded.$0</shadedPattern>
                 </relocation>
                 <relocation>
-                  <pattern>io.netty</pattern>
+                  <pattern>org.jboss.netty</pattern>
                   <shadedPattern>org.apache.tez.shaded.$0</shadedPattern>
                 </relocation>
                 <relocation>
