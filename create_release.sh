@@ -29,4 +29,4 @@ curl -XPOST -H "Authorization:token $GITHUB_TOKEN" \
 
 curl -XPOST -H "Authorization:token $GITHUB_TOKEN" \
     -H "Content-Type:application/octet-stream" \
-    --data-binary @tez-plugins/tez-aux-services/target/tez-aux-services-$VERSION.jar https://uploads.github.com/repos/$GITHUB_ORGANIZATION/$GITHUB_REPO/releases/$id/assets?tez-aux-services-$VERSION.jar
+    --data-binary @tez-plugins/tez-aux-services/target/tez-aux-services-$VERSION.jar https://uploads.github.com/repos/$GITHUB_ORGANIZATION/$GITHUB_REPO/releases/$id/assets?name=tez-aux-services-$VERSION.jar
